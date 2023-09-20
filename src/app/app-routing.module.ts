@@ -1,21 +1,38 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './auth/login/login.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { authGuard, teacherAuthGuard, welcomeGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
-    pathMatch: 'full',
+    component: WelcomePageComponent,
+    canActivate: [welcomeGuard],
+  },
+
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'login',
-    canActivate: [],
-    component: LoginComponent,
+    path: 'student',
+    canActivate: [authGuard],
+    loadChildren: () =>
+      import('./users/student/student.module').then(
+        (module) => module.StudentModule
+      ),
+  },
+  {
+    path: 'teacher',
+    canActivate: [teacherAuthGuard],
+    loadChildren: () =>
+      import('./users/teacher/teacher.module').then(
+        (module) => module.TeacherModule
+      ),
   },
   {
     path: '**',
-    redirectTo: 'login', //si esta logged te mueve a home
+    redirectTo: '',
   },
 ];
 
