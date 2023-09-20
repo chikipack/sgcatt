@@ -1,22 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
+import { StudentModule } from './users/student/student.module';
+import { TeacherModule } from './users/teacher/teacher.module';
+
 import { AppComponent } from './app.component';
-import { LoginComponent } from './auth/login/login.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, WelcomePageComponent],
   imports: [
-    BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
+    AuthModule,
+    StudentModule,
+    TeacherModule,
+    BrowserModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
