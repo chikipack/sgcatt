@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     component: WelcomePageComponent,
-    canActivate: [welcomeGuard],
+    // canActivate: [welcomeGuard],
   },
 
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'student',
-    canActivate: [authGuard],
+    // canActivate: [authGuard],
     loadChildren: () =>
       import('./users/student/student.module').then(
         (module) => module.StudentModule
@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'teacher',
-    canActivate: [teacherAuthGuard],
+    // canActivate: [teacherAuthGuard],
     loadChildren: () =>
       import('./users/teacher/teacher.module').then(
         (module) => module.TeacherModule
