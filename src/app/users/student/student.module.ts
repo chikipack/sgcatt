@@ -9,9 +9,12 @@ import { StudentRoutingModule } from './student-routing.module';
 import { HomeComponent } from './home/home.component';
 import { MyttComponent } from './mytt/mytt.component';
 import { InvitationsComponent } from './invitations/invitations.component';
+import { TtsugestionsComponent } from './ttsugestions/ttsugestions.component';
+import { TtlibraryComponent } from './ttlibrary/ttlibrary.component';
+import { TtcalendarComponent } from './ttcalendar/ttcalendar.component';
 
 @NgModule({
-  declarations: [HomeComponent, MyttComponent, InvitationsComponent],
+  declarations: [HomeComponent, MyttComponent, InvitationsComponent, TtsugestionsComponent, TtlibraryComponent, TtcalendarComponent],
   imports: [
     CommonModule,
     StudentRoutingModule,
