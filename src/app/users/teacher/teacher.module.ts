@@ -8,9 +8,11 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { TeacherRoutingModule } from './teacher-routing.module';
 import { TeacherHomeComponent } from './teacher-home/teacher-home.component';
+import { DirectorComponent } from './director/director.component';
+import { SynodalComponent } from './synodal/synodal.component';
 
 @NgModule({
-  declarations: [TeacherHomeComponent],
+  declarations: [TeacherHomeComponent, DirectorComponent, SynodalComponent],
   imports: [
     CommonModule,
     TeacherRoutingModule,
