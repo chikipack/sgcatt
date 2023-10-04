@@ -8,9 +8,10 @@ import { StudentRoutingModule } from './student-routing.module';
 
 import { HomeComponent } from './home/home.component';
 import { MyttComponent } from './mytt/mytt.component';
+import { InvitationsComponent } from './invitations/invitations.component';
 
 @NgModule({
-  declarations: [HomeComponent, MyttComponent],
+  declarations: [HomeComponent, MyttComponent, InvitationsComponent],
   imports: [
     CommonModule,
     StudentRoutingModule,
