@@ -31,6 +31,12 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'admin',
+    //canActivate:[]
+    loadChildren: () =>
+      import('./users/admin/admin.module').then((module) => module.AdminModule),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
