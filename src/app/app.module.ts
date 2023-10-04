@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
+import { AdminModule } from './users/admin/admin.module';
 import { StudentModule } from './users/student/student.module';
 import { TeacherModule } from './users/teacher/teacher.module';
 
@@ -18,6 +19,7 @@ import { CookieService } from 'ngx-cookie-service';
     HttpClientModule,
     AppRoutingModule,
     AuthModule,
+    AdminModule,
     StudentModule,
     TeacherModule,
     BrowserModule,
