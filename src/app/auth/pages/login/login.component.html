@@ -1,6 +1,6 @@
 <div class="login-container">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
-        <h2 class="mb-4">Iniciar Sesión</h2>
+        <h2 class="mb-4">Sign in</h2>
         <div class="mb-4">
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Matricula</mat-label>
@@ -18,3 +18,4 @@
 
     </form>
 </div>
+<button mat-flat-button class="w-100" color="primary" (click)="goToSignUp()">Sign up</button>
