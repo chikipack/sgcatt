@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { AuthService } from '../../auth.service';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -9,23 +9,14 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent {
-  signupForm: FormGroup;
+  @ViewChild('signupForm', { static: true }) signupForm!: NgForm;
   constructor(
     private formBuilder: FormBuilder,
-    // private router: Router,
     private authService: AuthService,
     private cookieService: CookieService
-  ) {
-    this.signupForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      middleName: ['', Validators.required],
-      institutionalEmail: ['', [Validators.required, Validators.email]],
-      personalEmail: ['', [Validators.required, Validators.email]],
-      matriculationNumber: ['', Validators.required],
-      password: ['', Validators.required],
-    });
-  }
+  ) {}
 
-  onSubmit() {}
+  onSubmit() {
+    console.log(this.signupForm.value);
+  }
 }
