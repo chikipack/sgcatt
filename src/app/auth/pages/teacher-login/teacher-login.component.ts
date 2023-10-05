@@ -15,7 +15,7 @@ interface TokenResponse {
   styleUrls: ['./teacher-login.component.css'],
 })
 export class TeacherLoginComponent {
-  @ViewChild('loginForm', { static: true }) loginForm!: NgForm;
+  @ViewChild('teacherLoginForm', { static: true }) teacherLoginForm!: NgForm;
   user: any;
   constructor(
     private formBuilder: FormBuilder,
@@ -25,11 +25,11 @@ export class TeacherLoginComponent {
   ) {}
 
   onSubmit() {
-    console.log(this.loginForm);
+    console.log(this.teacherLoginForm);
     // this.authService
     //   .getAuthTokenTeacher(
-    //     this.loginForm.value.email,
-    //     this.loginForm.value.password
+    //     this.teacherLoginForm.value.email,
+    //     this.teacherLoginForm.value.password
     //   )
     //   .subscribe((res: TokenResponse) => {
     //     console.log(res);
