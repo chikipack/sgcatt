@@ -10,6 +10,7 @@ import { ForgotPassComponent } from './pages/forgot-pass/forgot-pass.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { TeacherLoginComponent } from './pages/teacher-login/teacher-login.component';
+import { LoginAdminComponent } from './pages/login-admin/login-admin.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TeacherLoginComponent } from './pages/teacher-login/teacher-login.compo
     SignupComponent,
     ForgotPassComponent,
     TeacherLoginComponent,
+    LoginAdminComponent,
   ],
   imports: [
     CommonModule,

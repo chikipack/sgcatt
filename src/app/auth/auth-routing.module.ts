@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { welcomeGuard } from './auth.guard';
 import { TeacherLoginComponent } from './pages/teacher-login/teacher-login.component';
+import { LoginAdminComponent } from './pages/login-admin/login-admin.component';
 const routes: Routes = [
   {
     path: '',
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'l3hr3r/login',
         component: TeacherLoginComponent,
+      },
+      {
+        path: 'admin/login',
+        component: LoginAdminComponent,
       },
       {
         path: '**',
