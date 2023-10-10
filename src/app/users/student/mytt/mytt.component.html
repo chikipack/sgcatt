@@ -1,7 +1,7 @@
-<button mat-raised-button color="primary" (click)="changeView()" class="btn btn-lg btn-primary mx-auto mt-3">Change
+<button mat-raised-button color="primary" (click)="changeView()" class="btn btn-lg btn-primary mt-3">Change
     view</button>
 
-<div *ngIf="!hasProjects; else elseBlock" class="text-center mt-4">
+<div *ngIf="!hasProjects; else elseBlock" class="text-center mt-4" style="overflow: hidden;">
     <div>
         <h2>You Have <strong>0</strong> projects</h2>
     </div>
@@ -9,13 +9,17 @@
 </div>
 
 <ng-template #elseBlock>
-    <mat-card class="mx-auto mt-4 card">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title>Title</mat-card-title>
-                <mat-card-subtitle>Description</mat-card-subtitle>
-            </mat-card-title-group>
-        </mat-card-header>
-        <mat-card-content>My TT </mat-card-content>
-    </mat-card>
+    <div *ngFor="let project of data" style="z-index: 200; margin-bottom: 30px; "
+        class="d-flex justify-content-center align-items-center">
+        <mat-card [class.mat-elevation-z8]="true" class="w-50">
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-title>{{project.title}}</mat-card-title>
+                    <mat-card-subtitle>{{project.date}}</mat-card-subtitle>
+                </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>{{project.students}} - {{project.teachers}} - {{project.panelists}}</mat-card-content>
+            <mat-card-footer>{{project.status}}</mat-card-footer>
+        </mat-card>
+    </div>
 </ng-template>
