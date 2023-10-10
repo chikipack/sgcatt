@@ -4,6 +4,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { StudentRoutingModule } from './student-routing.module';
 
 import { HomeComponent } from './home/home.component';
@@ -14,7 +15,14 @@ import { TtlibraryComponent } from './ttlibrary/ttlibrary.component';
 import { TtcalendarComponent } from './ttcalendar/ttcalendar.component';
 
 @NgModule({
-  declarations: [HomeComponent, MyttComponent, InvitationsComponent, TtsugestionsComponent, TtlibraryComponent, TtcalendarComponent],
+  declarations: [
+    HomeComponent,
+    MyttComponent,
+    InvitationsComponent,
+    TtsugestionsComponent,
+    TtlibraryComponent,
+    TtcalendarComponent,
+  ],
   imports: [
     CommonModule,
     StudentRoutingModule,
@@ -22,6 +30,7 @@ import { TtcalendarComponent } from './ttcalendar/ttcalendar.component';
     MatTabsModule,
     MatIconModule,
     MatButtonModule,
+    MatCardModule,
   ],
 })
 export class StudentModule {}

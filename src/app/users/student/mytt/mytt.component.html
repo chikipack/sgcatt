@@ -1,1 +1,21 @@
-<p>mytt works!</p>
+<button mat-raised-button color="primary" (click)="changeView()" class="btn btn-lg btn-primary mx-auto mt-3">Change
+    view</button>
+
+<div *ngIf="!hasProjects; else elseBlock" class="text-center mt-4">
+    <div>
+        <h2>You Have <strong>0</strong> projects</h2>
+    </div>
+    <button mat-raised-button color="primary" class="btn btn-primary">+ New TT</button>
+</div>
+
+<ng-template #elseBlock>
+    <mat-card class="mx-auto mt-4 card">
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title>Title</mat-card-title>
+                <mat-card-subtitle>Description</mat-card-subtitle>
+            </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>My TT </mat-card-content>
+    </mat-card>
+</ng-template>
