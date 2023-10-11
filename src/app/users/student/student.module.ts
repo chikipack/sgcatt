@@ -5,6 +5,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 import { StudentRoutingModule } from './student-routing.module';
 
 import { HomeComponent } from './home/home.component';
@@ -13,6 +19,7 @@ import { InvitationsComponent } from './invitations/invitations.component';
 import { TtsugestionsComponent } from './ttsugestions/ttsugestions.component';
 import { TtlibraryComponent } from './ttlibrary/ttlibrary.component';
 import { TtcalendarComponent } from './ttcalendar/ttcalendar.component';
+import { ProtocolDialogComponent } from './mytt/protocol-dialog/protocol-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +29,7 @@ import { TtcalendarComponent } from './ttcalendar/ttcalendar.component';
     TtsugestionsComponent,
     TtlibraryComponent,
     TtcalendarComponent,
+    ProtocolDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -31,6 +39,11 @@ import { TtcalendarComponent } from './ttcalendar/ttcalendar.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatAutocompleteModule,
   ],
 })
 export class StudentModule {}

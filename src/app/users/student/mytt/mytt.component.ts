@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { ProtocolDialogComponent } from './protocol-dialog/protocol-dialog.component';
 
 @Component({
   selector: 'app-mytt',
@@ -34,10 +36,19 @@ export class MyttComponent implements OnInit {
   ];
 
   hasProjects!: boolean;
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
-    this.hasProjects = true;
+    this.hasProjects = false;
+  }
+
+  dialogRefAdd!: MatDialogRef<ProtocolDialogComponent>;
+  openProtocolForm(): void {
+    this.dialogRefAdd = this.dialog.open(ProtocolDialogComponent, {});
+
+    this.dialogRefAdd.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
   }
 
   //testing functions

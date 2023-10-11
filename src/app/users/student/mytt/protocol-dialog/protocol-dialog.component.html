@@ -1,0 +1,54 @@
+<div mat-dialog-content class="container">
+    <form [formGroup]="protocolRequest" class="container">
+        <div class="container">
+            <div class="row mt-1">
+                <div class="col-lg-12">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Protocol's Title</mat-label>
+                        <input matInput type="text" formControlName="nombreProyecto" required>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-lg-12">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Student</mat-label>
+                        <input matInput type="text" formControlName="integrante1" required>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-lg-12">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Teammate (optional)</mat-label>
+                        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl"
+                            [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions | async"
+                                [value]="concatenateNames(option)"
+                                (onSelectionChange)="onOptionSelected(option, myControl2)">
+                                {{ option.nombres }} {{ option.apellidoP }} {{ option.apellidoM }}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col-lg-12">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Teammate (optional)</mat-label>
+                        <input type="text" placeholder="Pick one" aria-label="Number" matInput
+                            [formControl]="myControl2" [matAutocomplete]="auto2">
+                        <mat-autocomplete #auto2="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions2 | async"
+                                [value]="concatenateNames(option)"
+                                (onSelectionChange)="onOptionSelected(option, myControl)">
+                                {{ option.nombres }} {{ option.apellidoP }} {{ option.apellidoM }}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
