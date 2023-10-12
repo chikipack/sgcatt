@@ -44,7 +44,10 @@ export class MyttComponent implements OnInit {
 
   dialogRefAdd!: MatDialogRef<ProtocolDialogComponent>;
   openProtocolForm(): void {
-    this.dialogRefAdd = this.dialog.open(ProtocolDialogComponent, {});
+    this.dialogRefAdd = this.dialog.open(ProtocolDialogComponent, {
+      height: '80%',
+      width: '60%',
+    });
 
     this.dialogRefAdd.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');

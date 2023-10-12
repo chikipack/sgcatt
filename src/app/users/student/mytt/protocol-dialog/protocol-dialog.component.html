@@ -1,4 +1,4 @@
-<div mat-dialog-content class="container">
+<div mat-dialog-content class="container mt-5">
     <form [formGroup]="protocolRequest" class="container" (ngSubmit)="onSubmit()">
         <div class="container">
             <div class="row mt-1">
@@ -77,8 +77,9 @@
                     </mat-form-field>
                 </div>
             </div>
-            <p-fileUpload mode="basic" #protocolFile [auto]="true" [customUpload]="true" accept=".pdf"
-                (uploadHandler)="fileUploader($event, protocolFile)" styleClass="w-100">
+            <p-fileUpload chooseLabel="Select protocol PDF" mode="basic" #protocolFile [auto]="true"
+                [customUpload]="true" accept=".pdf" (uploadHandler)="fileUploader($event, protocolFile)"
+                styleClass="w-100">
                 <ng-container *ngIf="protocolRequest.get('fileInput')?.invalid">
                     <p style="color: red;">Invalid File</p>
                 </ng-container>
