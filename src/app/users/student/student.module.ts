@@ -11,6 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
+import { FileUploadModule } from 'primeng/fileupload';
+
 import { StudentRoutingModule } from './student-routing.module';
 
 import { HomeComponent } from './home/home.component';
@@ -44,6 +46,7 @@ import { ProtocolDialogComponent } from './mytt/protocol-dialog/protocol-dialog.
     ReactiveFormsModule,
     MatInputModule,
     MatAutocompleteModule,
+    FileUploadModule,
   ],
 })
 export class StudentModule {}
