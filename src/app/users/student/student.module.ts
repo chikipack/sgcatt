@@ -22,6 +22,7 @@ import { TtsugestionsComponent } from './ttsugestions/ttsugestions.component';
 import { TtlibraryComponent } from './ttlibrary/ttlibrary.component';
 import { TtcalendarComponent } from './ttcalendar/ttcalendar.component';
 import { ProtocolDialogComponent } from './mytt/protocol-dialog/protocol-dialog.component';
+import { InvitationDialogComponent } from './invitations/invitation-dialog/invitation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ProtocolDialogComponent } from './mytt/protocol-dialog/protocol-dialog.
     TtlibraryComponent,
     TtcalendarComponent,
     ProtocolDialogComponent,
+    InvitationDialogComponent,
   ],
   imports: [
     CommonModule,
