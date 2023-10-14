@@ -14,6 +14,8 @@ import { MatTableModule } from '@angular/material/table';
 
 import { FileUploadModule } from 'primeng/fileupload';
 
+import { ChunkPipe } from './ttcalendar/ttcalendar.component';
+
 import { StudentRoutingModule } from './student-routing.module';
 
 import { HomeComponent } from './home/home.component';
@@ -35,6 +37,7 @@ import { InvitationDialogComponent } from './invitations/invitation-dialog/invit
     TtcalendarComponent,
     ProtocolDialogComponent,
     InvitationDialogComponent,
+    ChunkPipe,
   ],
   imports: [
     CommonModule,
